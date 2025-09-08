@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Changing Background Color</title>
+  </head>
+  <style>
+    #conatiner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+    .div {
+      display: inline-block;
+      height: 300px;
+      width: 200px;
+      color: white;
+      padding: 20px;
+      margin: 0 20px;
+      text-align: center;
+      border: 2px solid rgb(197, 13, 13);
+      font-size: 30px;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 0px 8px rgba(0, 0, 0, 0.4);
+    }
+    #red {
+      background-color: #e4004b;
+    }
+    #green {
+      background-color: #67c090;
+    }
+    #purple {
+      background-color: #ae75da;
+    }
+    #pink {
+      background-color: #ffc1da;
+    }
+    #blue {
+      background-color: #77BEF0;
+    }
+    #noColor {
+       display: flex;
+       justify-content: center;  /* X-axis (horizontal center) */
+      align-items: center;   
+      color: rgb(251, 205, 205);
+      background-color: rgb(111, 10, 10);
+      height: 30px;
+      width: 150px;
+      border: 1px solid rgb(197, 13, 13);
+      border-radius: 5px;
+      font-size: 3px bold;
+      cursor: pointer;
+      margin-top: 80px;
+      margin-bottom: 200px;
+    }
+    p{
+      background-color: #C9CDCF;
+      color: #E4004B;
+      height: 40px;
+      width: 400px;
+      display: flex;
+      font-size: 20px;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2px;
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid black;
+      border-radius: 10px;
+    }
+    #main{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center ;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+  <body>
+    
+    <div id="main">
+      <P>Change Background Color</P>
+    <div id="conatiner">
+      <div id="red" class="div">Red</div>
+      <div id="green" class="div">Green</div>
+      <div id="purple" class="div">Purple</div>
+      <div id="pink" class="div">Pink</div>
+      <div id="blue" class="div">Blue</div>
+    </div>
+    <div id="noColor">Default</div>
+    </div>
+
+    <script>
+      const red = document.getElementById("red");
+      const green = document.getElementById("green");
+      const purple = document.getElementById("purple");
+      const pink = document.getElementById("pink");
+      const noColor = document.getElementById("noColor");
+      const blue = document.getElementById("blue");
+
+      red.addEventListener("click", () => {
+        document.body.style.backgroundColor = "#E4004B";
+      });
+      green.addEventListener("click", () => {
+        document.body.style.backgroundColor = "#67C090";
+      });
+      purple.addEventListener("click", () => {
+        document.body.style.backgroundColor = "#AE75DA";
+      });
+      blue.addEventListener("click",()=>{
+        document.body.style.backgroundColor="#77BEF0";
+      })
+      pink.addEventListener("click", () => {
+        document.body.style.backgroundColor = "#FFC1DA";
+      });
+      
+      noColor.addEventListener("click", () => {
+        document.body.style.backgroundColor = "white";
+      });
+    </script>
+  </body>
+</html>
